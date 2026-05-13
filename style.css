@@ -595,4 +595,52 @@ footer p{
     color:var(--gray);
     font-size:15px;
 }
+   /* =========================
+   MENU MOBILE
+========================= */
+
+.hamburger{
+    display:none;
+    flex-direction:column;
+    cursor:pointer;
+    gap:6px;
+}
+
+.hamburger span{
+    width:28px;
+    height:3px;
+    background:white;
+    border-radius:10px;
+    transition:0.4s;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .hamburger{
+        display:flex;
+    }
+
+    .nav-menu{
+        position:absolute;
+        top:90px;
+        left:-100%;
+        width:100%;
+        background:#020617;
+        padding:40px 0;
+        transition:0.5s;
+    }
+
+    .nav-links{
+        flex-direction:column;
+        align-items:center;
+        gap:25px;
+    }
+
+    .nav-menu.active{
+        left:0;
+    }
+
+}
 
